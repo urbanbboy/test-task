@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/2d7385160f.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <section class="section">
+            <div class="container">
+                <div>
+                    <h2 class="title">Users</h2>
+                    <div class="filter-bar">
+                        <button class="btn">Обновить</button>
+                        <input class="search__input search__input-bar" type="text" id="filter" placeholder="Поиск"
+                            oninput="filterUsers(this.value)" />
+                        <select class="sort sort-bar" id="sort" onchange="sortUsers(this.value)">
+                            <option value="name">По имени</option>
+                            <option value="email">По email</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="filters">
+                        <button class="btn">Обновить</button>
+                        <input class="search__input" type="text" id="filter" placeholder="Поиск"
+                            oninput="filterUsers(this.value)" />
+                        <select class="sort" id="sort" onchange="sortUsers(this.value)">
+                            <option value="name">По имени</option>
+                            <option value="email">По email</option>
+                        </select>
+                    </div>
+                    <div id="notFoundMessage">Nothing found.</div> 
+                    <div class="card__wrapper"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./main.js"></script>
+</body>
+
+</html>

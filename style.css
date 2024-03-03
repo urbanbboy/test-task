@@ -1,0 +1,160 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* button reset */
+button {
+  font: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* form element reset */
+input {
+  font: inherit;
+}
+
+.container {
+    padding: 30px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.title {
+    text-align: center;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.card__wrapper {
+    width: 88%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #e3eaff;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    width: 240px;
+    transition: .3s all linear;
+    overflow: hidden;
+}
+
+.card h2 {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.card p {
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 3px 0;
+}
+
+.card p > i {
+    padding-right: 5px;
+}
+
+.card:hover {
+    transform: scale(1.01);
+    box-shadow: 2px 2px 15px 0px rgba(0,0,0,0.38);
+    -webkit-box-shadow: 2px 2px 15px 0px rgba(0,0,0,0.38);
+    -moz-box-shadow: 2px 2px 15px 0px rgba(0,0,0,0.38);
+}
+
+/* filters */
+
+.filters {
+    width: 12%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.btn {
+    padding: 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    transition: .2s all linear;
+}
+
+.btn:hover {
+    background-color: #bbccf9;
+}
+
+.search__input {
+    margin-top: 30px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.search__input-bar {
+    border: 1px solid #000;
+    margin: 10px;
+}
+
+.sort {
+    margin-top: 7px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.sort-bar {
+    border: 1px solid #000;
+}
+
+.filter-bar {
+    display: none;
+    margin: 0;
+}
+
+@media (max-width: 939px) {
+    .card__wrapper {
+        width: 75%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .filters {
+        width: 25%;
+    }
+}
+
+@media (max-width: 750px) {
+    .card__wrapper {
+        width: 100%;
+    }
+
+    .filters {
+        display: none;
+    }
+
+    .filter-bar {
+        display: block;
+    }    
+}
+
+#notFoundMessage {
+    display: none;
+    text-align: center;
+    font-style: italic;
+    margin-top: 20px;
+}
